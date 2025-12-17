@@ -59,8 +59,8 @@ if __name__ == '__main__':
 
     jsonl_bytes = to_jsonl_bytes(jsonlines)
 
-    os.makedirs("data/batch_requests", exist_ok=True)
-    local_path = f"data/batch_requests/{int(time.time())}_gemini_requests.jsonl"
+    os.makedirs("../data/batch_requests", exist_ok=True)
+    local_path = f"../data/batch_requests/{int(time.time())}_gemini_requests.jsonl"
     with open(local_path, "wb") as f:
         f.write(jsonl_bytes)
         print(f"  - 로컬에 JSONL 파일 저장: {local_path}")
